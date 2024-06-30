@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSAU Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+  <div id="forms">
+  <div>
+  <center><h2>Add Expense</h2></center>
+    <form id="add-expense">
+      <input type="text" id="name" placeholder="Expense Name" required>
+      <input type="text" id="category" placeholder="Category" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+      <input type="date" id="date" required>
+      <button type="submit">Add Expense</button>
+    </form>
+  </div>
+  <div>
+    <center><h2>Filter Expenses</h2>
+    <p>(Category wise)</p>
+  </center>
+    <form id="filter-expenses_1">
+      <input type="text" id="filter-category" placeholder="Category">
+      <button type="submit">Filter Expenses</button>
+    </form>
+  </div>
+  <div>
+    <center><h2>Filter Expenses</h2>
+    <p>(Month,Year wise)</p>
+  </center>
+    <form id="filter-expenses_2">
+      <input type="month" id="filter-month-year">
+      <button type="submit">Filter Expenses</button>
+    </form>
+  </div>
+  </div>
+  <div id="edit" style="display:none;">
+    <center><h2>Edit Expense</h2></center>
+    <form id="edit-expense">
+      <input type="hidden" id="edit-id">
+      <input type="text" id="edit-name" placeholder="Expense Name" required>
+      <input type="text" id="edit-category" placeholder="Category" required>
+      <input type="number" id="edit-amount" placeholder="Amount" required>
+      <input type="date" id="edit-date" required>
+      <button type="submit">Save Changes</button>
+      <button type="button" onclick="document.getElementById('edit').style.display = 'none';">Cancel</button>
+    </form>
+  </div>
+
+
+  <div>
+    <center><h2>All Expenses</h2></center>
+    <table id="expensetable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
