@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('expensetracker', 'root', 'Madhu@14', {
-  host:'localhost',
+const sequelize = new Sequelize('freedb_expensetracker', 'freedb_app-user', 'Yb7$n@5!H38$*jz', {
+  host:'sql.freedb.tech',
   dialect:'mysql'
 });
 
